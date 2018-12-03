@@ -1,0 +1,356 @@
+html, body { padding: 0; margin: 0; }
+.lottery-module * { padding: 0; margin: 0; }
+.clearfix:after { content: ""; display: block; clear: both; }
+.clearfix { zoom: 1; }
+* { text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none;}
+img { display: block; border: none; border: 0; }
+ul, li { margin: 0; padding: 0; list-style: none; }
+
+.lottery-module {
+     padding: 20px 0;
+     width: 100%;
+     background: url(http://orw3q8coq.bkt.clouddn.com/active/img/lottery_bg-2.png) center 80px no-repeat;
+     font-family: "Microsoft Yahei",
+     sans-serif;
+     .lottery-container {
+         width: 990px;
+         margin: 0 auto;
+     }
+
+     .img-title {
+         width: 100%;
+         .img {
+             display: block;
+             margin: 0 auto;
+         }
+     }
+
+     .text-title {
+         position: relative;
+         width: 100%;
+         height: 60px;
+         background: #a2350a;
+         line-height: 60px;
+         text-align: center;
+         color: #fff;
+     }
+     .lottery-bg {
+         position: relative;
+         margin: 0 auto;
+         width: 458px;
+         height: 457px;
+     }
+     .lottery-girdview {
+         position: relative;
+         margin: 24px 27px 0 0;
+         width: 402px;
+         height: 402px;
+         float: right;
+         .gird {
+             position: absolute;
+             width: 130px;
+             height: 130px;
+             overflow: hidden;
+             img {
+                 display: block;
+                 width: 100%;
+                 height: auto;
+             }
+             &.active::after {
+                 display: block;
+                 content: "";
+                 width: 100%;
+                 height: 100%;
+                 border-radius: 10px;
+                 background-color: rgba(255,255,255,.6);
+             }
+         }
+         .action {
+             position: relative;
+             left: 136px;
+             top: 136px;
+            //  background: url(../images/btn.png) no-repeat center;
+            //  background-size: contain;
+             cursor: pointer;
+             &.activity-over::after {
+                  position: absolute;
+                  content: "已结束";
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(0, 0, 0, .6);
+                  border-radius: 10px;
+                  font-size: 20px;
+                  color: #fff;
+                  line-height: 136px;
+                  text-align: center;
+             }
+         }
+         .item-1 {
+             left: 0;
+             top: 0;
+         }
+         .item-2 {
+             left: 136px;
+             top: 0;
+         }
+         .item-3 {
+             left: 272px;
+             top: 0;
+         }
+         .item-4 {
+             left: 272px;
+             top: 136px;
+         }
+         .item-5 {
+             left: 272px;
+             top: 272px;
+         }
+         .item-6 {
+             left: 136px;
+             top: 272px;
+         }
+         .item-7 {
+             left: 0;
+             top: 272px;
+         }
+         .item-8 {
+             left: 0;
+             top: 136px;
+         }
+     }
+    //  .lottery-list {
+    //       position: relative;
+    //       margin-left: 78px;
+    //       margin-top: 160px;
+    //       width: 310px;
+    //       height: 208px;
+    //       float: left;
+    //       overflow: hidden;
+    //       .list-wrap {
+    //           position: absolute;
+    //           left: 0;
+    //           top: 0;
+    //       }
+    //       .list {
+    //           width: 100%;
+    //           height: 26px;
+    //           line-height: 26px;
+    //           color: #333;
+    //           font-size: 14px;
+    //           text-align: center;
+    //       }
+    //       span {
+    //          float: left;
+    //          overflow: hidden;
+    //       }
+    //       .name {
+    //           width: 175px;
+    //       }
+    //       .username {
+    //           width: 135px;
+    //       }
+    //  }
+     .lottery-record {
+         margin: 20px auto 50px;
+         width: 100%;
+         text-align: center;
+
+         .record-btn {
+             line-height: 20px;
+             color: #fff;
+             font-size: 14px;
+             text-decoration: underline;
+         }
+     }
+
+     .lottery-rules {
+         margin: 30px auto 0;
+         width: 874px;
+         overflow: hidden;
+         font-size: 14px;
+         line-height: 1.85;
+         color: #fff;
+     }
+}
+.easyDialog_wrapper {
+    .lottery-tips {
+        padding: 60px;
+        width: 460px;
+        box-sizing: border-box;
+        span {
+            display: block;
+            line-height: 26px;
+        }
+    }
+    //中奖纪录
+    .records {
+        width: 500px;
+        padding: 10px 0 30px;
+        .no-record {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            padding: 60px;
+        }
+
+        .record-th {
+            overflow: hidden;
+            padding-left: 26px;
+            .name-th,
+            .time-th {
+                font-weight: 700;
+                height: 50px;
+                line-height: 50px;
+            }
+            .time-th {
+                width: 175px;
+            }
+        }
+
+        .record-tr {
+            height: auto !important;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+
+        .name-tr,
+        .name-th {
+            float: left;
+            text-align: left;
+            width: 270px;
+        }
+
+        .time-tr,
+        .time-th {
+            float: right;
+            text-align: left;
+            width: 160px;
+        }
+
+        .record {
+            overflow: hidden;
+             padding-left: 16px;
+             margin-left: 10px;
+             &:nth-child(2n+2) {
+                 background-color: #efefef;
+             }
+            span {
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                color: #333;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow:ellipsis;
+            }
+
+        }
+    }
+    //地址
+    .newaddress-ctn {
+        padding: 40px;
+        margin-bottom: 30px;
+        width: 720px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #efefef;
+        .address-group {
+            position: relative;
+            margin-bottom: 34px;
+            font-size: 12px;
+            color: #999;
+            text-align: left;
+            .error-tips {
+                display: none;
+                position: absolute;
+                padding-left: 20px;
+                line-height: 26px;
+                height: 26px;
+                top: 32px;
+                left: 145px;
+                color: #fe0000;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 6px;
+                    content: "！";
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    color: #fff;
+                    line-height: 14px;
+                    text-align: center;
+                    background-color: #fe0000;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+                label {
+                    vertical-align: top;
+                    margin-top: 24px;
+                }
+                .error-tips {
+                    top: 72px
+                }
+            }
+            .input-text {
+                width: 250px;
+                padding-left: 10px;
+                height: 30px;
+                line-height: 30px;
+                outline: none;
+                border: 1px solid #ececec;
+                &:focus {
+                    border-color: #333;
+                }
+            }
+            .input-textarea {
+                 padding: 10px;
+                 line-height: 24px;
+                 outline: none;
+                 border: 1px solid #ececec;
+                 &:focus {
+                     border-color: #333;
+                 }
+            }
+            ::-webkit-input-placeholder {
+                font-size: 12px;
+                color: #999;
+                font-family: Microsoft Yahei, sans-serif;
+            }
+            label {
+                display: inline-block;
+                width: 100px;
+                padding-right: 10px;
+                text-align: right;
+                vertical-align: middle;
+            }
+            .icon-stars::after {
+                content: "*";
+                color: #f33;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 3px;
+                font-style: normal;
+            }
+        }
+    }
+    .fixed-tips {
+        z-index: 10001;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        display: none;
+        width: 240px;
+        height: 130px;
+        border-radius: 8px;
+        margin-left: -120px;
+        margin-top: -65px;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        line-height: 130px;
+        background-color: rgba(0,0,0,.6);
+    }
+}

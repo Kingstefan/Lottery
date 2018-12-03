@@ -1,0 +1,13 @@
+<% if(data && data.length > 0){ %>
+    <ul class="cmp-autocomplete">
+        <%data.forEach(function(item) { %>
+        <li class="list-item cmp-autocomplete-item g-sensor-search-item" data-value="<%=item%>">
+            <a
+                data-search="<%=item%>"
+                data-title="<%=item%>">
+                <%=item%>
+            </a>
+        </li>
+        <% })%>
+    </ul>
+<%}%>

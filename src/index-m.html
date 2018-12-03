@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://douglas3.haituncun.com//skin/frontend/beauty_h5/default/js/jquery-1.7.min.js?v=20181112"></script>
+    <title>九宫格大转盘抽奖</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                isIOS = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+                dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+                scale = 1 / dpr,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+            docEl.dataset.dpr = dpr;
+
+            var metaEl = doc.createElement('meta');
+            metaEl.name = 'viewport';
+            metaEl.content = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale;
+            docEl.firstElementChild.appendChild(metaEl);
+
+            var recalc = function () {
+                var width = docEl.getBoundingClientRect().width;
+                if (width / dpr > 750) {
+                    width = 750 * dpr;
+                }
+                docEl.style.fontSize = 100 * (width / 750) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body>
+    <div class="lottery-module clearfix">
+        <div class="lottery-container clearfix">
+            <div class="img-title"></div>
+            <div class="text-title">九宫格大转盘抽奖</div>
+            <div class="lottery-girdview">
+
+            </div>
+            <div class="lottery-list_bg">
+                <div class="lottery-list">
+                    <ul class="list-wrap" style="top: -96px;">
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="lottery-record">
+                <a href="javascript:void(0)" class="record-btn">点击查看我的中奖纪录</a>
+            </div>
+            <div class="lottery-rules">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog-bg-l"></div>
+    <div class="dialog-wrap-l">
+        <div class="dialog-l">
+            <div class="dialog-header"></div>
+            <div class="dialog-content"></div>
+            <div class="dialog-btn-group clearfix">
+                <div class="btn_dialog btn-cancel-l"></div>
+                <div class="btn_dialog btn-confirm-l"></div>
+            </div>
+        </div>
+        <div class="btn_dialog btn-close-l"></div>
+    </div>
+
+<div class="newaddress-ctn">
+    <div class="addr-title">
+        <i class="icon-back"></i>
+        添加收货地址
+    </div>
+    <div class="address-group input-group clearfix">
+        <label for="name">
+            收 货 人
+        </label>
+        <input id="name" name="name" type="text" sel-id="addr-text-name" class="input-text input-field" data-action="name"
+            data-success="false" placeholder="请填写真实姓名">
+             <div class="accout-error error-tips"></div>
+    </div>
+    <div class="address-group input-group clearfix">
+        <label for="tel">
+            手机号码
+        </label>
+        <input id="tel" name="tel" type="text" sel-id="addr-text-tel" class="input-text input-field" data-action="tel"
+            data-success="false" placeholder="请输入手机号码">
+             <div class="accout-error error-tips"></div>
+    </div>
+    <div class="address-group input-group clearfix">
+        <label for="address" class="addr-label">
+           收货地址
+        </label>
+         <textarea id="address" name="address" rows="2" cols="24" sel-id="addr-text-address" data-action="addr" data-success="false" placeholder="请填写详细地址，确保准确送达"
+            class="input-textarea input-field" placeholder="请填写详细地址，确保准确送达"></textarea>
+             <div class="accout-error error-tips"></div>
+    </div>
+    <div class="save-btn">确定</div>
+    <div class="fixed-tips"></div>
+</div>
+<div style="width:100%; height: 50rem; background:green;">555555555555555555555555555555555555555555555555555</div>
+
+</body>
+
+
+</html>
+<script>
+    $('.lottery-module').lottery({
+        speed: 280, //初始转动速度设置，但是真正的转动速度为(speed/circle)
+        circle: 4, //n圈之前加速运动，转动n圈后进入减速阶段，最好是(totleTimes/8/2)近似值相等
+        totleTimes: 64, //转动基本次数：即至少需要转动多少圈再进入抽奖环节，建议不要少于50次，否则动画效果欠佳
+
+        id: 53, //大转盘活动ID
+        //failImgSrc: 'http://orw3q8coq.bkt.clouddn.com/active/img/fail.png', //未抽到奖品的背景图
+        //winImgSrc: 'http://orw3q8coq.bkt.clouddn.com/active/img/win.png', //抽到奖品的背景图
+        failImgSrc: 'http://orw3q8coq.bkt.clouddn.com/active/img/fail.png', //未抽到奖品的背景图
+        winImgSrc: 'http://orw3q8coq.bkt.clouddn.com/active/img/win.png', //抽到奖品的背景图
+    });
+</script>

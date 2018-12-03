@@ -1,0 +1,24 @@
+@import "utils";
+
+.cmp-modal-tip {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+    
+    .cmp-tip-content {
+        @include v-align();
+        max-width: 6rem;
+        min-width: 2rem;
+        padding: rem(28 32);
+        line-height: 1.4;
+        background-color: rgba(0, 0, 0, 0.60);
+        border-radius: rem(8);
+        font-size: rem(30);
+        color: #ffffff;
+        transition: .4s ease-in-out;
+    }
+}

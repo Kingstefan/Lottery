@@ -1,0 +1,12 @@
+<% if(data && data.length) {
+    data.forEach(function(item) { %>
+    <div class="search-info g-sensor-search-item js-complete-item" data-value="<%=item%>">
+        <a class="search-item"
+           href="javascript:;"
+           data-search="<%=item%>"
+           data-title="<%=item%>">
+            <span class="js-search-key"><%=item%></span>
+        </a>
+    </div>
+    <% })
+} %>

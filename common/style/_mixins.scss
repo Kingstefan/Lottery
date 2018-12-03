@@ -1,0 +1,27 @@
+// only mixins
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin text-ellipsis() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+@mixin v-align {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.clearfix{
+  @include clearfix;
+}

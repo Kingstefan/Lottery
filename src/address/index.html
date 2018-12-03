@@ -1,0 +1,84 @@
+<div id="newAddressCtn" class="newaddress-ctn">
+    <form action="/customer/address/formPost/" method="post" id="newAddressForm" novalidate="true" class="address-input-ctn">
+
+        <a href="javascript:void(0);" id="btnCancel-close" class="close btn-cancel">x</a>
+        <h1 class="newaddress-title add">新建地址</h1>
+        <h1 class="newaddress-title edit">修改地址</h1>
+        <p class="accout-error-all accout-error clearfix"></p>
+        <div class="address-group input-group clearfix">
+            <label for="">
+                <i class="icon-stars"></i>收货人姓名
+            </label>
+            <input id="firstname" name="firstname" type="text" sel-id="addr-text-consignee" class="input-text"
+                placeholder="请填写身份证上的姓名" required>
+            <p class="accout-error error-tips"></p>
+        </div>
+        <div class="address-group input-group clearfix">
+            <label>
+                <i class="icon-stars"></i>收货地址
+            </label>
+            <select id="country" name="nation_NoUse" sel-id="addr-select-country" class="input-select">
+                <option value="国家、地域">国家、地域</option>
+                <option value="中国大陆">中国大陆</option>
+                <option value="港澳台">港澳台</option>
+            </select>
+            <select id="region_id" name="region" sel-id="addr-select-province" class="input-select" required>
+                <option value="省份">省份</option>
+            </select>
+            <select id="city" name="city" class="input-select" sel-id="addr-select-city" required>
+                <option value="地级市">地级市</option>
+            </select>
+            <select id="s_county" name="county" class="input-select" sel-id="addr-select-county" required>
+                <option value="市、县级市">市、县级市</option>
+            </select>
+            <p class="accout-error error-tips"></p>
+        </div>
+        <div class="address-group input-group clearfix">
+            <label for="street">
+                <i class="icon-stars"></i>地址
+            </label>
+            <input type="text" name="streetinfo" placeholder="请填写详细地址，确保准确送达" sel-id="addr-text-street" id="street"
+                class="input-text street" required>
+            <p class="accout-error error-tips"></p>
+        </div>
+        <div class="address-group input-group clearfix">
+            <label for="telephone">
+                <i class="icon-stars"></i>
+                手机号码
+            </label>
+            <input type="text" name="telephone" placeholder="请填写正确的手机号码" sel-id="addr-text-cellphone" class="input-text"
+                id="telephone" required>
+            <p class="accout-error error-tips"></p>
+        </div>
+
+        <div class="address-group input-group clearfix">
+            <label for="postcode">
+                <i class="icon-stars"></i>邮政编码
+            </label>
+            <input type="text" name="postcode" placeholder="请填写正确的邮政编码" sel-id="addr-text-postcode" id="postcode" class="input-text"
+                required>
+            <p class="accout-error error-tips"></p>
+        </div>
+        <div class="address-group input-group clearfix">
+            <label for="email">
+                <i class="icon-stars"></i>
+                常用邮箱
+            </label>
+            <input placeholder="请输入正确的邮箱" name="email" sel-id="addr-text-email" id="email" type="text" class="input-text"
+                required>
+            <p class="accout-error error-tips" sel-id="addr-btn-cancle"></p>
+        </div>
+
+        <div class="address-ctrl clearfix" sel-id="addr-checkbox-set-default">
+            <input class="clause-checkbox left" name="default" id="clauseCheckbox" type="checkbox" value="1" checked
+                valid="true">
+            <label for="clauseCheckbox" class="icon icon-checked left"></label>
+            <label for="clauseCheckbox" class="left">设为默认</label>
+        </div>
+        <div class="address-btn input-group clearfix">
+            <input type="button" id="btnSaveAddress" sel-id="addr-btn-save" class="btn btn-save-address" value="确认保存"
+                data-event-loading value="确认保存..." original-value="确认保存">
+            <input type="button" id="btnCancel" sel-id="addr-btn-cancle" class="btn  btn-cancel" value="取消">
+        </div>
+    </form>
+</div>

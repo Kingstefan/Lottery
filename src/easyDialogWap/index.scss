@@ -1,0 +1,80 @@
+@function pxTorem($px) {
+    @return $px / 100px * 1rem;
+}
+.dialog-bg-l {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    z-index: 99;
+}
+.dialog-wrap-l {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: pxTorem(600px);
+    transform: translate3d(-50%,-50%,0);
+    font-family: "Microsoft Yahei";
+    text-align: center;
+    z-index: 100;
+    .dialog-l {
+        width: 100%;
+        padding-bottom: pxTorem(50px);
+        background-color: #fff;
+        border-radius: pxTorem(26px);
+        text-align: center;
+    }
+    .dialog-header {
+        padding-top: pxTorem(40px);
+        font-size: pxTorem(30px);
+        font-weight: 700;
+        color: #ed5756;
+        img {
+            display: inline-block;
+            width: pxTorem(500px);
+            height: auto;
+        }
+    }
+    .dialog-content {
+        padding: pxTorem(60px) 0;
+    }
+    .dialog-btn-group {
+        font-size: 0;
+    }
+    .btn_dialog {
+         box-sizing: border-box;
+         margin-right: pxTorem(15px);
+         display: inline-block;
+         vertical-align: middle;
+         height: pxTorem(60px);
+         line-height: pxTorem(60px);
+         font-size: pxTorem(24px);
+         border-radius: pxTorem(30px);
+
+    }
+    .btn-cancel-l {
+        width: pxTorem(180px);
+        border: pxTorem(2px) solid #ed5757;
+        color: #ed5757;
+    }
+    .btn-confirm-l {
+        width: pxTorem(240px);
+        background-color: #ed5757;
+        color: #fff;
+
+    }
+    .btn-close-l {
+        margin: pxTorem(102px) auto 0;
+        width: pxTorem(88px);
+        height: pxTorem(88px);
+        background: url(http://orw3q8coq.bkt.clouddn.com/active/img/close.png) no-repeat;
+        background-size: contain;
+
+    }
+}

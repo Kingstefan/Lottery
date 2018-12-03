@@ -1,0 +1,15 @@
+<% if(data && data.length > 0){ %>
+<dl class="cmp-history">
+    <dt class="cmp-history-title">
+        <span>历史记录</span>
+        <a class="btn-remove cmp-btn-clean">删除全部</a>
+    </dt>
+    <% data.forEach(function (item) { %>
+    <dd class="list-item cmp-history-item g-sensor-search-item clearfix" data-value="<%=item%>" data-search="<%=item%>"
+        data-title="<%=item%>">
+        <span class="cmp-history-text"><%=item%></span>
+        <a class="btn-remove cmp-btn-remove">删除</a>
+    </dd>
+    <% }) %>
+</dl>
+<% } %>

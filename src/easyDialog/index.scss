@@ -1,0 +1,85 @@
+/* easyDialog 插件样式 */
+.easyDialog_wrapper * {
+    padding: 0;
+    margin: 0;
+}
+.easyDialog_wrapper {
+    color: #444;
+    display: none;
+    font-family: "Microsoft yahei";
+}
+
+.easyDialog_wrapper .easyDialog_content {
+    background: #fff;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.easyDialog_wrapper .easyDialog_title {
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    color: #666;
+    padding: 0 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #efefef;
+}
+
+.easyDialog_wrapper .close_btn {
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-top: 19px;
+    font-size: 0;
+    background: url(icon-close.png) center no-repeat / contain;
+}
+
+.easyDialog_wrapper .close_btn:hover {
+    color: #333;
+}
+
+.easyDialog_wrapper .easyDialog_text {
+    font-size: 14px;
+    line-height: 1.625;
+    color: #333;
+    text-align: center;
+}
+
+.easyDialog_wrapper .easyDialog_footer {
+    text-align: center;
+    padding: 0 10px;
+    *zoom: 1;
+}
+
+.easyDialog_wrapper .easyDialog_footer:after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+
+.easyDialog_wrapper .btn_highlight,
+.easyDialog_wrapper .btn_normal {
+    height: 38px;
+    line-height: 36px;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.easyDialog_wrapper .btn_highlight {
+   background: #333;
+   border-color: #333;
+   color: #fff;
+}
+
+.easyDialog_wrapper .btn_normal {
+    margin-right: 15px;
+    border-color: #333;
+    background: #fff;
+    color: #333;
+}

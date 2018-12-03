@@ -1,0 +1,28 @@
+<div class="cmp-search-box js-search-box">
+    <form action="<%=action%>" method="get" class="search-form clearfix js-search-form">
+        <div class="keyword-ctn">
+            <label for=""><input type="text" class="keyword js-search-q" maxlength="50" autocomplete="off"
+                                 placeholder="<%=inputPlaceHolder%>"
+                                 data-value="<%=value%>"></label>
+            <input type="hidden" name="q">
+            <button type="submit" class="btn-submit"><i class="iconfont icon-search"></i></button>
+        </div>
+        <a href="" class="back-home js-back">取消</a>
+    </form>
+    <% if(hotSearch && hotSearch.length){ %>
+    <div class="hot-search js-hot-search">
+        <h1 class="hot-search-title">热门搜索</h1>
+        <div class="hot-search-word">
+            <div class="hot-search">
+                <% hotSearch.forEach(function(item)  { %>
+                <a class="<%= item.isCommUse ? 'hot' : '' %> g-sensor-search-item"
+                   href="<%= item.href %>"><%= item.value %></a>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    <div class="search-list js-search-history"></div>
+    <div class="search-list js-complete-box"></div>
+</div>
+

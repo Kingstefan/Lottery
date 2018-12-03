@@ -1,0 +1,405 @@
+html, body { padding: 0; margin: 0; }
+.lottery-module * { padding: 0; margin: 0; }
+.clearfix:after { content: ""; display: block; clear: both; }
+.clearfix { zoom: 1; }
+* { text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none;}
+img { display: block; border: none; border: 0; }
+ul, li { margin: 0; padding: 0; list-style: none; }
+@function pxTorem($px) {
+    @return $px / 100px * 1rem;
+}
+
+.lottery-module {
+     padding: pxTorem(20px) 0;
+     width: 100%;
+     background: red url(http://orw3q8coq.bkt.clouddn.com/active/img/lottery-bg-1.png) center top no-repeat;
+     font-family: "Microsoft Yahei",sans-serif;
+     background-size: contain !important;
+     .lottery-container {
+         width: 100%;
+         margin: 0 auto;
+     }
+     .img-title {
+         width: 100%;
+         .img {
+             display: block;
+             margin: 0 auto;
+         }
+     }
+
+     .text-title {
+         position: relative;
+         width: 100%;
+         margin: 0 auto;
+         height: pxTorem(80px);
+         background-color: #a2350a;
+         line-height: pxTorem(80px);
+         color: #fff;
+         font-size: pxTorem(30px);
+         text-align: center;
+     }
+     .lottery-girdview {
+       position: relative;
+       margin: 0 auto pxTorem(25px);
+       width: pxTorem(720px);
+       height: pxTorem(728px);
+    //    background: url(../images/lottery_bg.png) center no-repeat;
+    //    background-size: contain;
+         .gird {
+             position: absolute;
+             width: pxTorem(210px);
+             height: pxTorem(210px);
+             overflow: hidden;
+             img {
+                 display: block;
+                 width: 100%;
+                 height: auto;
+             }
+             &.active::after {
+                 position: absolute;
+                 left: 0;
+                 top: 0;
+                 display: block;
+                 content: "";
+                 width: 100%;
+                 height: 100%;
+                 border-radius: pxTorem(10px);
+                 background-color: rgba(255,255,255,.7);
+             }
+         }
+         .action {
+             position: relative;
+             left: pxTorem(255px);
+             top: pxTorem(250px);
+            //  background: url(../images/action_btn.png) no-repeat center;
+            //  background-size: contain;
+             cursor: pointer;
+             &.activity-over::after {
+                position: absolute;
+                content: "已结束";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.6);
+                border-radius: pxTorem(10px);
+                font-size: pxTorem(30px);
+                color: #fff;
+                line-height: pxTorem(210px);
+                text-align: center;
+             }
+         }
+         .item-1 {
+             left: pxTorem(35px);
+             top: pxTorem(30px);
+         }
+         .item-2 {
+            left: pxTorem(255px);
+            top: pxTorem(30px);
+         }
+         .item-3 {
+            left: pxTorem(475px);
+            top: pxTorem(30px);
+         }
+         .item-4 {
+             left: pxTorem(475px);
+             top: pxTorem(250px);
+         }
+         .item-5 {
+            left: pxTorem(475px);
+            top: pxTorem(470px);
+         }
+         .item-6 {
+            left: pxTorem(255px);
+            top: pxTorem(470px);
+         }
+         .item-7 {
+            left: pxTorem(35px);
+            top: pxTorem(470px);
+         }
+         .item-8 {
+            left: pxTorem(35px);
+            top: pxTorem(250px);
+         }
+     }
+     .lottery-list_bg {
+          position: relative;
+          margin: 0 auto;
+          width: pxTorem(696px);
+          height: pxTorem(605px);
+        //   background: url(../images/record_bg.png) no-repeat center top;
+        //   background-size: contain;
+          overflow: hidden;
+     }
+     .lottery-list {
+         position: relative;
+         margin: pxTorem(200px) auto 0;
+         width: pxTorem(670px);
+         height: pxTorem(384px);
+         overflow: hidden;
+
+         .list-wrap {
+             position: absolute;
+             left: 0;
+             top: 0;
+         }
+
+         .list {
+             width: 100%;
+             height: pxTorem(48px);
+             line-height: pxTorem(48px);
+             color: #333;
+             font-size: pxTorem(26px);
+             text-align: left;
+         }
+
+         span {
+             float: left;
+             overflow: hidden;
+         }
+
+         .name {
+
+             width: pxTorem(360px);
+         }
+
+         .username {
+             padding-left: pxTorem(35px);
+             width: pxTorem(275px);
+         }
+     }
+     .lottery-record {
+         width: 100%;
+         margin: pxTorem(30px) 0 pxTorem(50px);
+         text-align: center;
+         line-height: pxTorem(30px);
+         height: pxTorem(30px);
+         font-size: pxTorem(26px);
+         .record-btn {
+             color: #fff;
+             text-decoration: underline;
+         }
+     }
+     .lottery-rules {
+        margin: pxTorem(56px) auto 0;
+        width: pxTorem(670px);
+        overflow: hidden;
+        font-size: pxTorem(26px)!important;
+        line-height: 1.8 !important;
+        color: #fff !important;
+        p,span {
+             font-size: pxTorem(26px) !important;
+             line-height: 1.8 !important;
+             color: #fff !important;
+        }
+     }
+}
+//地址
+.newaddress-ctn {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    transition: all .3s ease;
+    &.active {
+        left: 0;
+    }
+    .addr-title {
+        position: relative;
+        margin-bottom: pxTorem(20px);
+        height: pxTorem(88px);
+        line-height: pxTorem(88px);
+        text-align: center;
+        font-size: pxTorem(30px);
+        color: #333;
+        background-color: #fff;
+        border-bottom: 1px solid #e3e3e3;
+        .icon-back {
+            position: absolute;
+            top: pxTorem(14px);
+            left: pxTorem(20px);
+            width: pxTorem(60px);
+            height: pxTorem(60px);
+            &::after {
+                position: absolute;
+                content: "";
+                left: pxTorem(20px);
+                top: pxTorem(20px);
+                width: pxTorem(20px);
+                height: pxTorem(20px);
+                border-bottom: 1px solid #333;
+                border-left: 1px solid #333;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .address-group {
+         padding: 0 pxTorem(40px);
+        font-size: pxTorem(24px);
+        height: pxTorem(98px);
+        line-height: pxTorem(98px);
+        border-bottom: 1px solid #e3e3e3;
+        background-color: #fff;
+        color: #333;
+        text-align: left;
+        .input-text, .input-textarea {
+            width: pxTorem(530px);
+            padding: pxTorem(10px);
+            height: pxTorem(60px);
+            line-height: pxTorem(60px);
+            font-size: pxTorem(24px);
+            border: none;
+            outline: none;
+        }
+        .input-textarea {
+            padding-top: pxTorem(28px);
+            line-height: pxTorem(40px);
+        }
+        ::-webkit-input-placeholder {
+            font-size: pxTorem(24px);
+            color: #666;
+            font-family: Microsoft Yahei,sans-serif;
+        }
+        label {
+            display: inline-block;
+            width: pxTorem(110px);
+            text-align: right;
+            vertical-align: top;
+            text-align: left;
+        }
+    }
+    .save-btn {
+        margin: pxTorem(40px) auto 0;
+        width: pxTorem(670px);
+        line-height: pxTorem(90px);
+        height: pxTorem(90px);
+        font-size: pxTorem(30px);
+        color: #fff;
+        border-radius: pxTorem(45px);
+        background-color: #ed5758;
+        text-align: center;
+    }
+    .fixed-tips,
+    .error-tips {
+        z-index: 101;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        display: none;
+        width: pxTorem(460px);
+        height: pxTorem(126px);
+        border-radius: pxTorem(20px);
+        margin-left: pxTorem(-230px);
+        margin-top: pxTorem(-63px);
+        font-size: pxTorem(24px);
+        color: #fff;
+        text-align: center;
+        line-height: pxTorem(126px);
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+}
+
+.noscroll,
+.noscroll1,
+.noscroll body,
+.noscroll1 body {
+    //position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.noscroll body,
+.noscroll1 body {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.dialog-wrap-l {
+    .lottery-tips {
+        padding: pxTorem(10px) pxTorem(60px);
+        box-sizing: border-box;
+        font-size: pxTorem(28px);
+        color: #333;
+        span {
+            display: block;
+            line-height: pxTorem(46px);
+        }
+        .tips {
+            font-size: pxTorem(30px);
+            color: #ed5758;
+            font-weight: 700;
+        }
+    }
+    //中奖纪录
+    .records {
+        width: pxTorem(560px);
+        margin: 0 auto;
+        .no-record {
+            text-align: center;
+            font-size: pxTorem(30px);
+            color: #333;
+        }
+
+        .record-th {
+            overflow: hidden;
+            padding-left: pxTorem(20px);
+            .name-th,
+            .time-th {
+                font-weight: 700;
+                height: pxTorem(40px);
+                line-height: pxTorem(40px);
+            }
+            .time-th {
+                width: pxTorem(190px);
+            }
+        }
+
+        .record-tr {
+            padding-top: pxTorem(40px);
+            height: auto !important;
+            max-height: pxTorem(420px);
+            overflow-y: auto;
+        }
+
+        .name-tr,
+        .name-th {
+            float: left;
+            text-align: left;
+            width: pxTorem(320px);
+            font-size: pxTorem(30px);
+        }
+
+        .time-tr,
+        .time-th {
+            float: right;
+            text-align: left;
+            width: pxTorem(200px);
+            font-size: pxTorem(30px);
+        }
+
+        .record {
+            overflow: hidden;
+            height: pxTorem(140px);
+             padding: pxTorem(28px) 0 pxTorem(28px) pxTorem(10px);
+             border-bottom: 1px solid #f5f5f5;
+             box-sizing: border-box;
+            span {
+                font-size: pxTorem(30px);
+                line-height: pxTorem(43px);
+                height: pxTorem(84px);
+                color: #333;
+                overflow: hidden;
+            }
+
+        }
+    }
+}

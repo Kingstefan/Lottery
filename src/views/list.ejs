@@ -1,0 +1,8 @@
+ <% if(data && data.length > 0){ %>
+    <% data.forEach(function(list){ %>
+        <li class="list">
+            <span class="username"><%= list.username %></span>
+            <span class="name"><%= list.name %></span>
+        </li>
+    <% }) %>
+<% } %>

@@ -1,0 +1,19 @@
+<div class="records">
+    <% if(records && records.length > 0){ %>
+        <div class="record-th">
+            <span class="name-th">奖品名称</span>
+            <span class="time-th">中奖时间</span>
+        </div>
+        <ul class="record-tr">
+            <% records.forEach(function(record){ %>
+                <li class="record">
+                    <span class="name-tr"><%= record.name %></span>
+                    <span class="time-tr"><%= record.time %></span>
+                </li>
+            <% }) %>
+        </ul>
+    <% }else{ %>
+        <div class="no-record">暂无中奖纪录，快去抽奖吧</div>
+    <% } %>
+</div>
+<div class="fixed-tips"></div>

@@ -1,0 +1,60 @@
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+input[type="text"] {
+    -webkit-appearance: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+:focus {
+    outline: none;
+}
+
+.fn-hide {
+    display: none;
+}
+
+.fn-show {
+    display: block;
+}
+
+.fn-visible{
+    visibility: visible;
+}
+
+.fn-hidden{
+    visibility: hidden;
+}
+
+.img-responsive {
+    display: block;
+    width: 100%;
+}
+
+.width_1190 {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+html.web-render.version-pc {
+    min-width: 1190px;
+    overflow-x: auto;
+}
+
+html.web-render.version-wap {
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    
+    body {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    
+    img, a {
+        -webkit-touch-callout: none;
+    }
+}

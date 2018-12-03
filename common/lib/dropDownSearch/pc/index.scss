@@ -1,0 +1,71 @@
+@import "utils";
+
+.cmp-dropdownsearch-form .btn-search {
+    cursor: pointer;
+}
+
+.cmp-dropdownsearch-dropcontent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    line-height: 28px;
+    z-index: 500;
+    background-color: #ffffff;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    
+    .list-item, .cmp-history-title {
+        padding: 0 15px;
+    }
+    
+    .list-item {
+        cursor: pointer;
+        
+        &.cls-active, &:hover {
+            background-color: #f2f2f2;
+            
+            .cmp-btn-remove {
+                display: block;
+            }
+        }
+        
+        &:active {
+            background-color: #fff;
+        }
+    }
+    
+    .cmp-history-title {
+        color: #999999;
+    }
+}
+
+.cmp-history {
+    .cmp-btn-clean {
+        cursor: pointer;
+        float: right;
+    }
+    
+    .cmp-btn-remove {
+        display: none;
+        float: right;
+    }
+    
+    .btn-remove {
+        color: #d72245;
+    }
+    
+    .cmp-history-text {
+        float: left;
+    }
+}
+
+.cmp-dropdownsearch {
+    @include clearfix();
+}
+
+#site_fu {
+    .cmp-dropdownsearch-dropcontent {
+        margin: 6px -3px 0 -3px;
+    }
+}

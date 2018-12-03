@@ -1,0 +1,14 @@
+<% if(data && data.length > 0){ %>
+    <ul class="gird-wrap">
+        <li class="action gird"></li>
+        <% data.forEach(function(gird, index){ %>
+            <li class="item-<%= index+1 %> gird" data-seq="<%= gird.seq %>">
+                <img src="<%= gird.image %>" alt="">
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
+
+
+
+

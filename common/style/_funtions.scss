@@ -1,0 +1,35 @@
+$is-enable-rem: true !default;
+$g-ratio: 100 !default;
+
+@function strip-unit($val) {
+  @if type_of($val) == 'number' and not unitless($val) {
+    @return $val / ($val * 0 + 1);
+  }
+
+  @return $val;
+}
+
+@function rem($val) {
+  @if type_of($val) == 'list' {
+    $sep: list_separator($val);
+    $res: ();
+
+    @each $item in $val {
+      $res: append($res, rem($item), $sep);
+    }
+
+    @return $res;
+  } @else {
+    $val-unitless: strip-unit($val);
+
+    @if($val-unitless == 0 or unit($val) == 'rem'){
+      @return $val
+    }
+
+    @if ($is-enable-rem) {
+      @return strip-unit($val) / $g-ratio * 1rem;
+    } @else {
+      @return strip-unit($val) * 1px
+    }
+  }
+}

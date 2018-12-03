@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>九宫格大转盘抽奖</title>
+    <script src="https://douglas3.haituncun.com//skin/frontend/beauty_pc/default/js/jquery-1.7.min.js?v=20181112"></script>
+</head>
+
+<body>
+    <div class="lottery-module clearfix">
+        <div class="lottery-container clearfix">
+            <div class="img-title"></div>
+            <div class="text-title">九宫格大转盘抽奖</div>
+            <div class="lottery-bg">
+                <div class="lottery-girdview">
+
+                </div>
+            </div>
+            <div class="lottery-record">
+                <a href="javascript:void(0)" class="record-btn">点击查看我的中奖纪录</a>
+            </div>
+            <div class="lottery-rules">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
+
+<script>
+    $('.lottery-module').lottery({
+        speed: 280, //初始转动速度设置，但是真正的转动速度为(speed/circle)
+        circle: 4, //n圈之前加速运动，转动n圈后进入减速阶段，最好是(totleTimes/8/2)近似值相等
+        totleTimes: 64, //转动基本次数：即至少需要转动多少圈再进入抽奖环节，建议不要少于50次，否则动画效果欠佳
+        id: 41, //大转盘活动ID
+    });
+</script>

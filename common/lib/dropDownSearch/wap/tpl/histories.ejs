@@ -1,0 +1,13 @@
+<% if(data && data.length){ %>
+<div class="top-search-title">历史记录</div>
+<div class="search-info js-search-info">
+    <% data.forEach(function(item)  { %>
+    <a class="search-item g-sensor-search-item js-history-item" href="javascript:;" data-value="<%=item%>">
+        <span class="sh-icon iconfont icon-lishi"></span>
+        <span><%=item%></span>
+        <span class="iconfont icon-search-delete del js-item-del"></span>
+    </a>
+    <% }) %>
+</div>
+<div class="del-all js-clear-history">清除历史记录</div>
+<% } %>
